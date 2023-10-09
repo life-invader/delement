@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint . --fix",
-    "stylelint": "npx stylelint **/*.css",
-    "stylelint:fix": "npx stylelint **/*.css --fix"
+    "stylelint": "npx stylelint **/*.pcss",
+    "stylelint:fix": "npx stylelint **/*.pcss --fix"
   },
   "devDependencies": {
     "@delement/eslint-config-primary": "1.0.4",
