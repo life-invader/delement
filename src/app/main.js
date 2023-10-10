@@ -1,7 +1,22 @@
 import "./style.pcss";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
+import javascriptLogo from "../../public/images/javascript.svg";
+import viteLogo from "../../public/images/vite.svg";
+import { setupCounter } from "../features/counter/counter.js";
+
+const runApp = async () => {
+  switch (process.env.NODE_ENV) {
+    case "development":
+      const { worker } = await import("../mocks/browser");
+      await worker.start();
+      console.debug("App dev run");
+  }
+};
+
+try {
+  runApp();
+} catch (error) {
+  console.error(error);
+}
 
 document.querySelector("#app").innerHTML = `
   <div>
