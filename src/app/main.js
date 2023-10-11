@@ -6,7 +6,7 @@ import { setupCounter } from "../features/counter/counter.js";
 const runApp = async () => {
   switch (process.env.NODE_ENV) {
     case "development":
-      const { worker } = await import("../mocks/browser");
+      const { worker } = await import("../shared/api/browser");
       await worker.start();
       console.debug("App dev run");
   }
