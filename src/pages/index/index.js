@@ -1,4 +1,6 @@
 import { getMeta, getPage } from "../../shared/lib";
+import { button } from "../../shared/ui/button";
+import { input } from "../../shared/ui/input";
 
 export default () => {
   return getPage({
@@ -28,7 +30,22 @@ export default () => {
         <p class="main__text">Это главная страница. Это главная страница. Это главная страница. Это главная страница. Это
           главная страница. Это главная страница. Это главная страница. Это главная страница. Это главная страница. Это
           главная страница. Это главная страница. Это главная страница. Это главная страница. Это главная страница. Это
-          главная страница.</p>
+          главная страница.
+        </p>
+        <ul class='main__list'>
+          <li>
+            ${button({ content: "Тестовая кнопка", classnames: [ "main__button" ] })}
+          </li>
+          <li>
+            ${button({ content: "Вторая тестовая кнопка", classnames: [ "main__button" ] })}
+          </li>
+          <li>
+            ${input({ id: "thisIsId", placeholder: "Это тестовый инпут" })}
+          </li>
+          <li>
+            ${input({ id: "thisIsAnotherId", placeholder: "Это заблоченый инпут", disabled: true })}
+          </li>
+        </ul>
       </div>
     </main>
     `,
