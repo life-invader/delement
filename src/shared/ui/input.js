@@ -1,23 +1,26 @@
-export const input = ({
-  type = "text",
-  id = "",
-  name = "",
-  disabled = false,
-  readOnly = false,
-  placeholder = "",
-  classnames = [],
-}) => {
-  const inputClassnames = classnames.join(" ");
-  
+import { commonComponentProps, getAttrs } from "../lib/index";
+
+const baseOptions = {
+  extraAttrs: {
+    type: "text",
+    disabled: false,
+    readOnly: false,
+  },
+};
+
+export const Input = (props) => {
+  const {
+    extraClasses = {},
+    extraAttrs = {},
+    baseClass = "input",
+    getCN,
+  } = { ...commonComponentProps, ...baseOptions, ...props };
+  const getClassName = (elem, mod) => getCN(baseClass, elem, mod);
+
   return `
     <input
-      class="input ${inputClassnames}"
-      type=${type}
-      ${id ? `id=${id}` : ""}
-      ${name ? `name=${name}` : ""}
-      ${disabled ? "disabled=true" : ""}
-      ${readOnly ? "readOnly=true" : ""}
-      ${placeholder ? `placeholder="${placeholder}"` : ""}
-      />
+      class="${getClassName("", extraClasses)}"
+      ${getAttrs(extraAttrs)}
+    />
       `;
 };

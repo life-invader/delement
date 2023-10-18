@@ -1,6 +1,6 @@
 import { getMeta, getPage } from "../../shared/lib";
-import { button } from "../../shared/ui/button";
-import { input } from "../../shared/ui/input";
+import { Button } from "../../shared/ui/button";
+import { Input } from "../../shared/ui/input";
 
 export default () => {
   return getPage({
@@ -34,16 +34,16 @@ export default () => {
         </p>
         <ul class='main__list'>
           <li>
-            ${button({ content: "Тестовая кнопка", classnames: [ "main__button" ] })}
+          ${Button({ label: "Тестовая кнопка" })}
           </li>
           <li>
-            ${button({ content: "Вторая тестовая кнопка", classnames: [ "main__button" ] })}
+            ${Button({ label: "Заблокированная кнопка", extraAttrs: { disabled: true } })}
           </li>
           <li>
-            ${input({ id: "thisIsId", placeholder: "Это тестовый инпут" })}
+            ${Input({ extraAttrs: { id: "thisIsId", placeholder: "Это тестовый инпут" } })}
           </li>
           <li>
-            ${input({ id: "thisIsAnotherId", placeholder: "Это заблоченый инпут", disabled: true })}
+            ${Input({ extraAttrs: { disabled: true, placeholder: "Заблоченный инпут" } })}
           </li>
         </ul>
       </div>
