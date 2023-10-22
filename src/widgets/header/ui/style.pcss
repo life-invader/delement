@@ -1,0 +1,23 @@
+.nav {
+  
+  &__list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+
+  &__list-link {
+    display: block;
+    padding: 5px 10px;
+    transition: all 0.2s;
+
+    &:hover:not(.nav__list-link--active) {
+      color: #f00;
+    }
+  }
+
+  &__list-link--active {
+    color: #8a2be2;
+  }
+}

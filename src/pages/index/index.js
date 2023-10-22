@@ -1,29 +1,15 @@
 import { getMeta, getPage } from "../../shared/lib";
 import { Button } from "../../shared/ui/button";
 import { Input } from "../../shared/ui/input";
+import { Footer } from "../../widgets/footer/ui/footer";
+import { Header } from "../../widgets/header/ui/header";
 
 export default () => {
   return getPage({
     title: "Главная",
     meta: [ getMeta({ name: "description", content: "This is index page" }) ],
-    body: `
-    <header class="header">
-      <div class="container">
-        <nav class="nav header__nav">
-          <ul class="nav__list">
-            <li class="nav__list-item">
-              <a class="nav__list-link nav__list-link--active" href="#">Главная</a>
-            </li>
-            <li class="nav__list-item">
-              <a class="nav__list-link" href="./about.html">О нас</a>
-            </li>
-            <li class="nav__list-item">
-              <a class="nav__list-link" href="./contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    body: ` 
+    ${Header({})}
     <main class="main">
       <div class="container">
         <h1 class="main__header">Главная</h1>
@@ -48,6 +34,7 @@ export default () => {
         </ul>
       </div>
     </main>
+    ${Footer()}
     `,
   });
 };

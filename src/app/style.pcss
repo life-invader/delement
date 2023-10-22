@@ -16,10 +16,18 @@ a {
   color: inherit;
 }
 
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: Arial, sans-serif;
   color: #000;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -28,31 +36,9 @@ body {
   margin: 0 auto;
 }
 
-.nav {
-  &__list {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    padding: 20px 0;
-  }
-
-  &__list-link {
-    display: block;
-    padding: 5px 10px;
-    transition: all 0.2s;
-
-    &:hover:not(.nav__list-link--active) {
-      color: #f00;
-    }
-  }
-
-  &__list-link--active {
-    color: #8a2be2;
-  }
-}
-
 .main {
   padding: 20px 0;
+  flex-grow: 1;
 
   &__text {
     margin-top: 20px;
