@@ -4,11 +4,13 @@ export class HeaderModel {
       return HeaderModel.#instance;
     }
 
-    HeaderModel.#instance = this;
+    const header = document.querySelector('[data-js-header="header"]')
+    HeaderModel.#instance = header;
   }
 
   run() {
-    console.log("Это модель Хедера, что она должна делать, хз")
+    console.log("Это модель Хедера")
+    console.log( HeaderModel.#instance)
   }
 
   static #instance;

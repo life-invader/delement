@@ -12,7 +12,7 @@ export const Header = (props) => {
   const getClassName = (elem, mod) => getCN(baseClass, elem, mod);
 
   return `
-  <header  class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-header="" >
+  <header  class="${getClassName("", extraClasses)}" ${getAttrs(extraAttrs)} data-js-header='header' >
     <div class="container">
       <nav class="nav header__nav">
         <ul class="nav__list">
