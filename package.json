@@ -47,5 +47,8 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "dependencies": {
+    "zustand": "4.4.4"
   }
 }

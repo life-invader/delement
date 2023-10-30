@@ -10,5 +10,6 @@ module.exports = {
   },
   rules: {
     "no-console": "warn",
+    "lines-between-class-members": "off",
   },
 };

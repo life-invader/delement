@@ -3,8 +3,18 @@ import { products } from "./mocks";
 
 export const handlers = [
   // Return all products
-  rest.get("/products", (_req, res, ctx) => {
-    return res(ctx.json(products));
+  rest.get("/products", ({ url }, res, ctx) => {
+    const categories = url.searchParams.getAll("category");
+
+    const filteredProducts = products.filter(({ name }) => {
+      if (categories.includes("all")) {
+        return true;
+      }
+
+      return categories.includes(name);
+    });
+
+    return res(ctx.json(filteredProducts));
   }),
 
   rest.post("/cart", (_req, res, ctx) => {
