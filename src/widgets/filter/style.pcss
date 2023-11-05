@@ -1,0 +1,29 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__label {
+    padding: 12px 24px;
+    background-color: #d7e8ff;
+    border-radius: 24px;
+    color: #1c6cd5;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__label input[type='checkbox'] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  &__label--active {
+    color: #fff;
+    background-color: #1c6cd5;
+  }
+}

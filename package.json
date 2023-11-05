@@ -47,5 +47,9 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "dependencies": {
+    "swiper": "11.0.3",
+    "zustand": "4.4.4"
   }
 }

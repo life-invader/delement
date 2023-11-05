@@ -1,34 +1,34 @@
 import { rest } from "msw";
+import { products } from "./mocks";
 
 export const handlers = [
-  rest.post("/login", (req, res, ctx) => {
-    // Persist user's authentication in the session
-    sessionStorage.setItem("is-authenticated", "true");
+  // Return all products
+  rest.get("/products", ({ url }, res, ctx) => {
+    const categories = url.searchParams.getAll("category");
 
-    return res(
-      // Respond with a 200 status code
-      ctx.status(200),
-    );
+    const filteredProducts = products.filter(({ name }) => {
+      if (categories.includes("all")) {
+        return true;
+      }
+
+      return categories.includes(name);
+    });
+
+    return res(ctx.json(filteredProducts));
   }),
 
-  rest.get("/user", (req, res, ctx) => {
-    // Check if the user is authenticated in this session
-    const isAuthenticated = sessionStorage.getItem("is-authenticated");
+  rest.post("/cart", (_req, res, ctx) => {
+    // Place new order
+    return res(ctx.json({ isSuccess: true }));
+  }),
 
-    if (!isAuthenticated) {
-      // If not authenticated, respond with a 403 error
-      return res(
-        ctx.status(403), ctx.json({
-          errorMessage: "Not authorized",
-        }),
-      );
-    }
+  rest.post("/cart/add", (_req, res, ctx) => {
+    // Add product to cart
+    return res(ctx.json({ isSuccess: true }));
+  }),
 
-    // If authenticated, return a mocked user details
-    return res(
-      ctx.status(200), ctx.json({
-        username: "admin",
-      }),
-    );
+  rest.delete("/cart", (_req, res, ctx) => {
+    // Remove product to cart
+    return res(ctx.json({ isSuccess: true }));
   }),
 ];
