@@ -15,13 +15,18 @@ export const Slider = (props) => {
   return `
     <div class="swiper slider">
       <ul class="swiper-wrapper slider__wrapper">
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-        ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+
       </ul>
     </div>`;
 };
+
+
+// {
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
+// }

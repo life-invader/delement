@@ -31,4 +31,9 @@ export const handlers = [
     // Remove product to cart
     return res(ctx.json({ isSuccess: true }));
   }),
+
+  rest.get("/popular", (_req, res, ctx) => {
+    // Remove product to cart
+    return res(ctx.json(products.slice(0, 7)));
+  }),
 ];
