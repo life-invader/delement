@@ -17,29 +17,24 @@ export const Header = (props) => {
   )} data-js-header='header' >
     <div class="container">
       <nav class="nav header__nav">
-        <div class="logo">
+        <div class="header__nav-logo">
           ${Logo({ extraAttrs: { src: "/images/logo.svg" } })}
         </div>
 
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__list-link nav__list-link--active" href="index.js">Главная</a>
+            <a class="nav__list-link" href="index.html" data-url="index">Главная</a>
           </li>
 
           <li class="nav__list-item">
-            <a class="nav__list-link" href="catalog.html">Каталог</a>
+            <a class="nav__list-link" href="catalog.html" data-url="catalog">Каталог</a>
           </li>
 
           <li class="nav__list-item">
-            <a class="nav__list-button button" href="cart.html">Корзина</a>
+            <a class="nav__list-button button" href="cart.html" data-url="cart">Корзина</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>`;
 };
-
-
-{ /* <div class="${getClassName("logo", { isValid: true })}">
-${Logo({ extraAttrs: { src: "/images/logo.svg" } })}
-</div> */ }

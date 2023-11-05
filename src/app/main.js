@@ -1,10 +1,7 @@
-import "./style.pcss";
-import "../widgets/header/ui/style.pcss";
-import "../widgets/footer/ui/style.pcss";
-
 import { HeaderModel } from "../widgets/header/model/header";
 import { FilterModel } from "../widgets/filter/model/index";
 import { CatalogModel } from "../widgets/catalog-list/model";
+import { SliderModel } from "../widgets/slider/model/model";
 
 const runApp = async () => {
   const runWidgets = async () => {
@@ -24,6 +21,7 @@ const runApp = async () => {
       new HeaderModel();
       new FilterModel();
       new CatalogModel();
+      new SliderModel()
 
       console.warn("App dev run");
   }
