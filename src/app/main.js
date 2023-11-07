@@ -2,6 +2,7 @@ import { HeaderModel } from "../widgets/header/model/header";
 import { FilterModel } from "../widgets/filter/model/index";
 import { CatalogModel } from "../widgets/catalog-list/model";
 import { SliderModel } from "../widgets/slider/model/model";
+import { CartModel } from "../widgets/cart/model/model";
 
 const runApp = async () => {
   const runWidgets = async () => {
@@ -22,6 +23,7 @@ const runApp = async () => {
       new FilterModel();
       new CatalogModel();
       new SliderModel()
+      new CartModel()
 
       console.warn("App dev run");
   }

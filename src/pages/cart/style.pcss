@@ -1,0 +1,30 @@
+.element {
+  width: 400px;
+  height: 50px;
+  background-color: black;
+}
+
+.total {
+  background-color: black;
+  width: 200px;
+  height: 100px;
+
+  flex-shrink: 0;
+}
+
+.cart {
+  padding: 56px 0 120px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-grow: 1;
+  }
+}

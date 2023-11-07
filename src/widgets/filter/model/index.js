@@ -15,6 +15,11 @@ export class FilterModel {
 
     const buttons = document.querySelectorAll(this.inputSelectors);
     const allButton = document.querySelector("[data-search-param=all]");
+
+    if (!allButton) {
+      return;
+    }
+
     this.buttons = buttons;
     this.allButton = allButton;
 
@@ -72,11 +77,11 @@ export class FilterModel {
   };
 
   init() {
-    this.buttons.forEach((button, index) => {
-      this.allButton.checked = true;
-      this.allButton.parentElement.classList.add("filter__label--active");
-      this.searchParams.append("category", "all");
+    this.allButton.checked = true;
+    this.allButton.parentElement.classList.add("filter__label--active");
+    this.searchParams.append("category", "all");
 
+    this.buttons.forEach((button, index) => {
       button.addEventListener(
         "change", index === 0 ? this.allProductsButtonClick : this.inputChangeHandler,
       );

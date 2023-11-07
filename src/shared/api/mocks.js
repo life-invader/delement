@@ -120,7 +120,7 @@ export const products = [
     isPopular: true,
   },
   {
-    idProduct: "1023",
+    idProduct: "10253",
     label: "Бесплатный офлайн курс",
     name: "data",
     productName: "Анализ данных",
@@ -135,7 +135,7 @@ export const products = [
     isPopular: true,
   },
   {
-    idProduct: "1023",
+    idProduct: "10323423",
     label: "Бесплатный офлайн курс",
     name: "structure",
     productName: "IT-инфраструктура",
@@ -150,7 +150,7 @@ export const products = [
     isPopular: true,
   },
   {
-    idProduct: "1023",
+    idProduct: "10212344353",
     label: "Бесплатный офлайн курс",
     name: "management",
     productName: "Управление разработкой",

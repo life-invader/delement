@@ -3,10 +3,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Swiper from "swiper";
 import { ProductCard } from "../../../entities/product/ui";
+import { selectIsProductInCart } from "../../../entities/product/model";
+import { addProductToCart } from "../../../features/cart/add-to-cart";
+import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
 
 export class SliderModel {
   node;
-  products;
+  products = [];
 
   constructor() {
     const swiper = document.querySelector(".swiper .swiper-wrapper");
@@ -38,12 +41,41 @@ export class SliderModel {
     this.products = products;
   }
 
-  renderSlides() {
-    this.products.forEach((item) => {
-      const slide = ProductCard({ item, extraClasses: [ "swiper-slide" ] });
-      this.node.insertAdjacentHTML("afterbegin", slide);
+  addProductToCart = (evt) => {
+    const button = evt.currentTarget;
+    const productId = button.dataset.productid;
+
+    addProductToCart(productId);
+    button.textContent = "Удалить";
+
+    button.removeEventListener("click", this.addProductToCart);
+    button.addEventListener("click", this.removeProductFromCart);
+  };
+
+  removeProductFromCart = (evt) => {
+    const button = evt.currentTarget;
+    const productId = button.dataset.productid;
+
+    removeProductFromCart(productId);
+    button.textContent = "В корзину";
+
+    button.removeEventListener("click", this.removeProductFromCart);
+    button.addEventListener("click", this.addProductToCart);
+  };
+
+  renderSlides = () => {
+    this.products.map((item) => {
+      const isInCart = selectIsProductInCart(item.idProduct);
+      const slide = ProductCard({
+        item,
+        extraClasses: [ "swiper-slide" ],
+        isInCart,
+        addToCart: this.addProductToCart,
+        removeFromCart: this.removeProductFromCart,
+      });
+      this.node.append(slide);
     });
-  }
+  };
 
   async init() {
     this.initSlider();

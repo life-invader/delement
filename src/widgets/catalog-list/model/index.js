@@ -1,5 +1,7 @@
-import { selectProducts, store } from "../../../entities/product/model";
+import { selectIsProductInCart, selectProducts, store } from "../../../entities/product/model";
 import { ProductCard } from "../../../entities/product/ui";
+import { addProductToCart } from "../../../features/cart/add-to-cart";
+import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
 
 export class CatalogModel {
   node;
@@ -9,16 +11,45 @@ export class CatalogModel {
     if (!this.node) {
       return;
     }
-    
+
     store.subscribe(this.render);
   }
+
+  addProductToCart = (evt) => {
+    const button = evt.currentTarget;
+    const productId = button.dataset.productid;
+
+    addProductToCart(productId);
+    button.textContent = "Удалить";
+
+    button.removeEventListener("click", this.addProductToCart);
+    button.addEventListener("click", this.removeProductFromCart);
+  };
+
+  removeProductFromCart = (evt) => {
+    const button = evt.currentTarget;
+    const productId = button.dataset.productid;
+
+    removeProductFromCart(productId);
+    button.textContent = "В корзину";
+
+    button.removeEventListener("click", this.removeProductFromCart);
+    button.addEventListener("click", this.addProductToCart);
+  };
 
   render = () => {
     const products = selectProducts();
     this.node.innerHTML = "";
 
     products.map((item) => {
-      this.node.insertAdjacentHTML("afterBegin", ProductCard({ item }));
+      const isInCart = selectIsProductInCart(item.idProduct);
+      const card = ProductCard({
+        item,
+        isInCart,
+        addToCart: this.addProductToCart,
+        removeFromCart: this.removeProductFromCart,
+      });
+      this.node.append(card);
     });
   };
 }

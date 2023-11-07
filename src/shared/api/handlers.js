@@ -17,23 +17,13 @@ export const handlers = [
     return res(ctx.json(filteredProducts));
   }),
 
+  // Place new order
   rest.post("/cart", (_req, res, ctx) => {
-    // Place new order
     return res(ctx.json({ isSuccess: true }));
   }),
 
-  rest.post("/cart/add", (_req, res, ctx) => {
-    // Add product to cart
-    return res(ctx.json({ isSuccess: true }));
-  }),
-
-  rest.delete("/cart", (_req, res, ctx) => {
-    // Remove product to cart
-    return res(ctx.json({ isSuccess: true }));
-  }),
-
+  // Remove product to cart
   rest.get("/popular", (_req, res, ctx) => {
-    // Remove product to cart
     return res(ctx.json(products.slice(0, 7)));
   }),
 ];

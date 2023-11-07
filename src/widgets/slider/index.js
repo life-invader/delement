@@ -19,14 +19,3 @@ export const Slider = (props) => {
       </ul>
     </div>`;
 };
-
-
-// {
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-//   ${ProductCard({ item: products[0], extraClasses: [ "swiper-slide" ] })}
-// }
