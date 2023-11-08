@@ -15,22 +15,22 @@ export class CatalogModel {
     store.subscribe(this.render);
   }
 
-  addProductToCart = (evt) => {
+  addProductToCart = async (evt) => {
     const button = evt.currentTarget;
     const productId = button.dataset.productid;
 
-    addProductToCart(productId);
+    await addProductToCart(productId);
     button.textContent = "Удалить";
 
     button.removeEventListener("click", this.addProductToCart);
     button.addEventListener("click", this.removeProductFromCart);
   };
 
-  removeProductFromCart = (evt) => {
+  removeProductFromCart = async (evt) => {
     const button = evt.currentTarget;
     const productId = button.dataset.productid;
 
-    removeProductFromCart(productId);
+    await removeProductFromCart(productId);
     button.textContent = "В корзину";
 
     button.removeEventListener("click", this.removeProductFromCart);

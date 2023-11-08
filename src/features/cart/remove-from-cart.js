@@ -1,5 +1,5 @@
 import { removeFromCart } from "../../entities/product/model";
 
-export const removeProductFromCart = (productId) => {
-  removeFromCart(productId);
+export const removeProductFromCart = async (productId) => {
+  await removeFromCart(productId);
 };

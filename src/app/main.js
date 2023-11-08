@@ -1,4 +1,3 @@
-import { HeaderModel } from "../widgets/header/model/header";
 import { FilterModel } from "../widgets/filter/model/index";
 import { CatalogModel } from "../widgets/catalog-list/model";
 import { SliderModel } from "../widgets/slider/model/model";
@@ -19,11 +18,10 @@ const runApp = async () => {
       await runWidgets();
       await worker.start();
 
-      new HeaderModel();
+      new CartModel()
       new FilterModel();
       new CatalogModel();
       new SliderModel()
-      new CartModel()
 
       console.warn("App dev run");
   }

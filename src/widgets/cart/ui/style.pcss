@@ -1,0 +1,118 @@
+.checkout {
+  background: linear-gradient(114deg, #f0f2f4 50.61%, #b5ff93 99.87%), #d9d9d9;
+  width: 400px;
+  flex-shrink: 0;
+  padding: 56px;
+  border-radius: 25px;
+
+  &__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: #0b1014;
+  }
+
+  &__desc-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  &__sum {
+    margin-top: 48px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: #0000004d;
+      top: -24px;
+    }
+  }
+
+  &__desc-term {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__desc-def {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #0b1014;
+  }
+
+  &__promo {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    span {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    input {
+      padding: 8px 18px;
+      border: none;
+      border-radius: 10px;
+      height: 48px;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+
+  &__button {
+    color: #fff;
+    background-color: #1c6cd5;
+    padding: 12px 24px;
+    display: block;
+    width: 100%;
+    margin-top: 28px;
+    border-radius: 10px;
+    border: none;
+    font-size: inherit;
+    line-height: 32px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.cart {
+  padding: 56px 0 120px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-grow: 1;
+    max-height: 680px;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #f0f2f4;
+      width: 10px;
+      margin-left: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #c5f7ae;
+      border-radius: 25px;
+    }
+  }
+}

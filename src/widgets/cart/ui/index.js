@@ -20,8 +20,31 @@ export const Cart = (props) => {
       
     </ul>
 
-    <div class="total">
-    
+    <div class="checkout">
+      <h2 class="checkout__title">Итого</h2>
+
+      <dl class="checkout__desc-list">
+        <dt class="checkout__desc-term">
+          <span class="checkout__qty">3</span> товара
+        </dt>
+        <dd class="checkout__desc-def">
+          <span class="checkout__price">24 000</span> ₽
+        </dd>
+      </dl>
+
+      <label class="checkout__promo">
+        <span>Промокод</span>
+        <input type="text" placeholder="Введите промокод" />
+      </label>
+
+      <dl class="checkout__desc-list checkout__sum">
+        <dt class="checkout__desc-term">Итоговая сумма</dt>
+        <dd class="checkout__desc-def">
+          <span class="checkout__total-price">24 000</span> ₽
+        </dd>
+      </dl>
+
+      <button class="checkout__button" type="submit">Оформить заказ</button>
     </div>
   </div>
     
