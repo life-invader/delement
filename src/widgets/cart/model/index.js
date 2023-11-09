@@ -11,7 +11,6 @@ import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
 
 export class CartModel {
   node;
-  selector = ".cart__list";
   cart;
   checkoutButton;
   promoInput;
@@ -21,17 +20,13 @@ export class CartModel {
       return CartModel.#instance;
     }
 
-    const cart = document.querySelector(this.selector);
+    const cart = document.querySelector(".cart__list");
     const checkoutButton = document.querySelector(".checkout__button");
     const promoInput = document.querySelector(".checkout__promo input");
 
     this.node = cart;
     this.checkoutButton = checkoutButton;
     this.promoInput = promoInput;
-
-    // if (!cart) {
-    //   return;
-    // }
 
     CartModel.#instance = this;
     store.subscribe((state) => state.cart, this.renderCartInfo);

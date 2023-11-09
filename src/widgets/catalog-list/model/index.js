@@ -8,6 +8,11 @@ export class CatalogModel {
   node;
 
   constructor() {
+    if (CatalogModel.#instance) {
+      return CatalogModel.#instance;
+    }
+
+    CatalogModel.#instance = this;
     this.node = document.querySelector(".list");
     if (!this.node) {
       return;
@@ -53,4 +58,6 @@ export class CatalogModel {
       this.node.append(card);
     });
   };
+
+  static #instance;
 }

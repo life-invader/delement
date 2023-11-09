@@ -1,18 +1,4 @@
-import { CartProduct } from "../../../entities/product/product-in-cart";
-import { products } from "../../../shared/api/mocks";
-import { commonComponentProps, getAttrs } from "../../../shared/lib/index";
-
-export const Cart = (props) => {
-  const {
-    extraClasses = {},
-    extraAttrs = {},
-    baseClass = "cart",
-    getCN,
-    categories,
-  } = { ...commonComponentProps, ...props };
-
-  const getClassName = (elem, mod) => getCN(baseClass, elem, mod);
-
+export const Cart = () => {
   return `
   <section class="cart">
   <div class="cart__wrapper">

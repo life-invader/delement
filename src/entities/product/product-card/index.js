@@ -1,9 +1,8 @@
-import { commonComponentProps, createNodeFromString, getAttrs } from "../../../shared/lib/index";
+import { commonComponentProps, createNodeFromString } from "../../../shared/lib/index";
 
 export const ProductCard = (props) => {
   const {
     extraClasses = [],
-    extraAttrs = {},
     baseClass = "product",
     getCN,
     item,

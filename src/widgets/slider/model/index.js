@@ -12,6 +12,11 @@ export class SliderModel {
   products = [];
 
   constructor() {
+    if (SliderModel.#instance) {
+      return SliderModel.#instance;
+    }
+
+    SliderModel.#instance = this;
     const swiper = document.querySelector(".swiper .swiper-wrapper");
     this.node = swiper;
 
@@ -84,4 +89,6 @@ export class SliderModel {
     await this.fetchPopularProds();
     this.renderSlides();
   }
+
+  static #instance;
 }

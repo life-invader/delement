@@ -1,10 +1,9 @@
-import { commonComponentProps, createNodeFromString, getAttrs } from "../../../shared/lib/index";
+import { commonComponentProps, createNodeFromString } from "../../../shared/lib/index";
 import { transformDate } from "../../../shared/utils/date";
 
 export const CartProduct = (props) => {
   const {
     extraClasses = [],
-    extraAttrs = {},
     baseClass = "cart-product",
     getCN,
     item,
@@ -22,7 +21,9 @@ export const CartProduct = (props) => {
       <dl class="cart-product__info">
         <div class="cart-product__info-wrapper">
           <dt>Регистрация на курс:</dt>
-          <dd>${transformDate(item.registration.startDate)} - ${transformDate(item.registration.endDate)}</dd>
+          <dd>${transformDate(item.registration.startDate)} - ${transformDate(
+    item.registration.endDate,
+  )}</dd>
         </div>
 
         <div class="cart-product__info-wrapper">
