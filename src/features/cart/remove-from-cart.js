@@ -1,4 +1,4 @@
-import { removeFromCart } from "../../entities/product/model";
+import { removeFromCart } from "../../shared/store/actions";
 
 export const removeProductFromCart = async (productId) => {
   await removeFromCart(productId);

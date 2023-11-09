@@ -1,4 +1,4 @@
-import { saveProducts } from "../../../entities/product/model";
+import { saveProducts } from "../../../shared/store/actions";
 
 export class FilterModel {
   node;

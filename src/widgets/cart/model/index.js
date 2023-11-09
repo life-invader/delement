@@ -1,13 +1,11 @@
+import { store } from "../../../shared/store/store";
+import { selectCart, selectProduct } from "../../../shared/store/selectors";
 import {
+  saveProducts,
   applyPromo,
   placeUserOrder,
   restoreUserCart,
-  saveProducts,
-  selectCart,
-  selectProduct,
-  selectProducts,
-  store,
-} from "../../../entities/product/model";
+} from "../../../shared/store/actions";
 import { CartProduct } from "../../../entities/product/product-in-cart";
 import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
 

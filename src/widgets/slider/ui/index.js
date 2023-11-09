@@ -1,5 +1,4 @@
-import { ProductCard } from "../../entities/product/ui";
-import { commonComponentProps, getAttrs } from "../../shared/lib/index";
+import { commonComponentProps, getAttrs } from "../../../shared/lib/index";
 
 export const Slider = (props) => {
   const {
@@ -7,7 +6,6 @@ export const Slider = (props) => {
     extraAttrs = {},
     baseClass = "header",
     getCN,
-    products,
   } = { ...commonComponentProps, ...props };
 
   const getClassName = (elem, mod) => getCN(baseClass, elem, mod);

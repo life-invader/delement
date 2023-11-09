@@ -1,5 +1,6 @@
-import { selectIsProductInCart, selectProducts, store } from "../../../entities/product/model";
-import { ProductCard } from "../../../entities/product/ui";
+import { store } from "../../../shared/store/store";
+import { selectIsProductInCart, selectProducts } from "../../../shared/store/selectors";
+import { ProductCard } from "../../../entities/product/product-card";
 import { addProductToCart } from "../../../features/cart/add-to-cart";
 import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
 

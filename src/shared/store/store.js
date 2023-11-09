@@ -55,19 +55,3 @@ export const store = createStore(
 );
 
 export const { getState, setState, subscribe } = store;
-
-// Actions
-export const saveProducts = store.getState().saveProducts;
-export const addToCart = store.getState().addToCart;
-export const removeFromCart = store.getState().removeFromCart;
-export const applyPromo = store.getState().applyPromo;
-export const restoreUserCart = store.getState().restoreCart;
-export const placeUserOrder = store.getState().placeUserOrder;
-
-// Selectors
-export const selectProducts = () => store.getState().products;
-export const selectProduct = (productId) =>
-  store.getState().products.find((item) => item.idProduct === productId);
-export const selectIsProductInCart = (productId) =>
-  store.getState().cart.productIds.includes(productId);
-export const selectCart = () => store.getState().cart;

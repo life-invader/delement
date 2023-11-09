@@ -1,7 +1,7 @@
-import { FilterModel } from "../widgets/filter/model/index";
+import { FilterModel } from "../widgets/filter/model";
 import { CatalogModel } from "../widgets/catalog-list/model";
-import { SliderModel } from "../widgets/slider/model/model";
-import { CartModel } from "../widgets/cart/model/model";
+import { SliderModel } from "../widgets/slider/model";
+import { CartModel } from "../widgets/cart/model";
 
 const runApp = async () => {
   const runWidgets = async () => {
@@ -18,10 +18,10 @@ const runApp = async () => {
       await runWidgets();
       await worker.start();
 
-      new CartModel()
+      new CartModel();
       new FilterModel();
       new CatalogModel();
-      new SliderModel()
+      new SliderModel();
 
       console.warn("App dev run");
   }

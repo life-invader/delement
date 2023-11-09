@@ -1,11 +1,7 @@
 import { getMeta, getPage } from "../../shared/lib";
-import { Button } from "../../shared/ui/button";
-import { Input } from "../../shared/ui/input";
 import { Footer } from "../../widgets/footer/ui/footer";
 import { Header } from "../../widgets/header/ui/header";
 import { Slider } from "../../widgets/slider";
-
-import { products } from "../../shared/api/mocks";
 
 export default () => {
   return getPage({
@@ -16,7 +12,7 @@ export default () => {
     <main class="main">
       <div class="container">
         <h1 class="title main__title">Главная</h1>
-        ${Slider({ products })}
+        ${Slider({  })}
         
         <section class="company">
           <div class="company__about">

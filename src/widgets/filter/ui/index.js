@@ -1,4 +1,4 @@
-import { commonComponentProps, getAttrs } from "../../shared/lib/index";
+import { commonComponentProps, getAttrs } from "../../../shared/lib/index";
 
 export const Filter = (props) => {
   const {

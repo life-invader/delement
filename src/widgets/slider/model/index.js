@@ -2,8 +2,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
-import { ProductCard } from "../../../entities/product/ui";
-import { selectIsProductInCart } from "../../../entities/product/model";
+import { ProductCard } from "../../../entities/product/product-card";
+import { selectIsProductInCart } from "../../../shared/store/selectors";
 import { addProductToCart } from "../../../features/cart/add-to-cart";
 import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
 
