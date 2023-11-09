@@ -18,7 +18,9 @@ export const Header = (props) => {
     <div class="container">
       <nav class="nav header__nav">
         <div class="header__nav-logo">
-          ${Logo({ extraAttrs: { src: "/images/logo.svg" } })}
+          <a href="/">
+            ${Logo({ extraAttrs: { src: "/images/logo.svg" } })}
+          </a>
         </div>
 
         <ul class="nav__list">

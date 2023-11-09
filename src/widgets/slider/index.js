@@ -17,5 +17,7 @@ export const Slider = (props) => {
       <ul class="swiper-wrapper slider__wrapper">
 
       </ul>
+      <div class="swiper__button-next"></div>
+      <div class="swiper__button-prev"></div>
     </div>`;
 };

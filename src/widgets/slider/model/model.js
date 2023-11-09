@@ -1,7 +1,7 @@
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
 import { ProductCard } from "../../../entities/product/ui";
 import { selectIsProductInCart } from "../../../entities/product/model";
 import { addProductToCart } from "../../../features/cart/add-to-cart";
@@ -25,13 +25,15 @@ export class SliderModel {
   initSlider() {
     new Swiper(".swiper", {
       slidesPerView: 4,
+      modules: [ Navigation ],
       grabCursor: true,
       spaceBetween: 32,
       slideClass: "swiper-slide",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      navigation: {
+        nextEl: ".swiper__button-next",
+        prevEl: ".swiper__button-prev",
       },
+      observer: true,
     });
   }
 

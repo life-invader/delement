@@ -11,7 +11,16 @@ export default () => {
     ${Header({})}
     <main class="main">
       <div class="container">
-        <h1 class="title">Корзина</h1>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/">Главная</a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" >Каталог</a>
+          </li>
+        </ul>
+        <h1 class="title main__title">Корзина</h1>
         
         ${Cart({})}
       </div>

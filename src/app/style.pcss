@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
   font-family: 'Proxima Nova';
   font-style: normal;
@@ -22,6 +23,7 @@
     url('fonts/ProximaNova-Bold.woff') format('woff');
 }
 
+/* Common */
 *,
 *::after,
 *::before {
@@ -62,11 +64,14 @@ body {
 }
 
 .main {
-  padding: 20px 0;
   flex-grow: 1;
 
   &__text {
     margin-top: 20px;
+  }
+
+  &__title {
+    margin-top: 56px;
   }
 
   &__list {
@@ -77,6 +82,27 @@ body {
   }
 }
 
+.breadcrumbs {
+  display: flex;
+  gap: 30px;
+  padding-top: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #888;
+
+  &__item + &__item &__link {
+    position: relative;
+
+    &::before {
+      content: '/';
+      position: absolute;
+      left: -15px;
+    }
+  }
+}
+
+/* Reusable components */
 .button {
   background-color: #1c6cd5;
   color: #fff;
@@ -84,19 +110,6 @@ body {
   text-transform: uppercase;
   padding: 12px 32px;
   cursor: pointer;
-  transition: box-shadow 0.2s;
-
-  &:hover {
-    box-shadow: 5px 5px 0 #000;
-  }
-
-  &:active {
-    transform: translate(5px, 5px);
-  }
-
-  &:disabled {
-    pointer-events: none;
-  }
 }
 
 .input {

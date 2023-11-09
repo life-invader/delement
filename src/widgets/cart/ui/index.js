@@ -48,7 +48,7 @@ export const Cart = (props) => {
     </div>
   </div>
     
-  <a href="catalog.html">Продолжить покупки</a>
+  <a class="checkout__continue" href="catalog.html">Продолжить покупки</a>
 </section>
     `;
 };

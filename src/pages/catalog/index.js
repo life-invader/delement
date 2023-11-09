@@ -50,7 +50,17 @@ export default () => {
       ${Header({})}
       <main class="main catalog">
         <div class="container">
-          <h1 class="catalog__title title">Каталог</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="/">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" >Каталог</a>
+            </li>
+          </ul>
+
+          <h1 class="title main__title">Каталог</h1>
           <div class="catalog__wrapper">
             ${Filter({ categories })}
             ${CatalogList()}
