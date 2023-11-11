@@ -14,7 +14,7 @@ export const Cart = () => {
           <span class="checkout__qty">3</span> товара
         </dt>
         <dd class="checkout__desc-def">
-          <span class="checkout__price">24 000</span> ₽
+          <span class="checkout__price"></span> ₽
         </dd>
       </dl>
 
@@ -26,7 +26,7 @@ export const Cart = () => {
       <dl class="checkout__desc-list checkout__sum">
         <dt class="checkout__desc-term">Итоговая сумма</dt>
         <dd class="checkout__desc-def">
-          <span class="checkout__total-price">24 000</span> ₽
+          <span class="checkout__total-price"></span> ₽
         </dd>
       </dl>
 

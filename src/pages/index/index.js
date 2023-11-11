@@ -11,7 +11,7 @@ export default () => {
     ${Header({})}
     <main class="main">
       <div class="container">
-        <h1 class="title main__title">Главная</h1>
+        <h1 class="title main__title">Популярные товары</h1>
         ${Slider({  })}
         
         <section class="company">

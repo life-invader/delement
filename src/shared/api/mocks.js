@@ -33,7 +33,7 @@ export const products = [
     idProduct: "1523",
     label: "Бесплатный офлайн курс",
     name: "backend",
-    productName: "Backend-разработчик»",
+    productName: "«Backend-разработчик»",
     category: [ "Веб-разработка", "Java" ],
     imageSrc: "/images/frontend-img-2.jpg",
     registration: {
@@ -48,7 +48,7 @@ export const products = [
     idProduct: "1623",
     label: "Бесплатный офлайн курс",
     name: "backend",
-    productName: "Backend-разработчик»",
+    productName: "«Backend-разработчик»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -63,7 +63,7 @@ export const products = [
     idProduct: "1273",
     label: "Бесплатный офлайн курс",
     name: "web",
-    productName: "Frontend-разработчик",
+    productName: "«Frontend-разработчик»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -78,7 +78,7 @@ export const products = [
     idProduct: "1283",
     label: "Бесплатный офлайн курс",
     name: "web",
-    productName: "Frontend-разработчик",
+    productName: "«Frontend-разработчик»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -93,7 +93,7 @@ export const products = [
     idProduct: "1293",
     label: "Бесплатный офлайн курс",
     name: "mobile",
-    productName: "IOS-разработчик»",
+    productName: "«IOS-разработчик»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -108,7 +108,7 @@ export const products = [
     idProduct: "1023",
     label: "Бесплатный офлайн курс",
     name: "mobile",
-    productName: "Android-разработчик",
+    productName: "«Android-разработчик»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -123,7 +123,7 @@ export const products = [
     idProduct: "10253",
     label: "Бесплатный офлайн курс",
     name: "data",
-    productName: "Анализ данных",
+    productName: "«Анализ данных»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -138,7 +138,7 @@ export const products = [
     idProduct: "10323423",
     label: "Бесплатный офлайн курс",
     name: "structure",
-    productName: "IT-инфраструктура",
+    productName: "«IT-инфраструктура»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {
@@ -153,7 +153,7 @@ export const products = [
     idProduct: "10212344353",
     label: "Бесплатный офлайн курс",
     name: "management",
-    productName: "Управление разработкой",
+    productName: "«Управление разработкой»",
     category: [ "Веб-разработка", "Мобильная разработка" ],
     imageSrc: "/images/frontend-img.jpg",
     registration: {

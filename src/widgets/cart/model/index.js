@@ -63,9 +63,9 @@ export class CartModel {
     const cartPrice = document.querySelector(".checkout__price");
     const cartTotalPrice = document.querySelector(".checkout__total-price");
 
-    qtyOfProducts.textContent = `${this.cart.qty}`;
-    cartPrice.textContent = `${this.cart.total}`;
-    cartTotalPrice.textContent = `${this.cart.totalWithPromo}`;
+    qtyOfProducts.textContent = this.cart.qty;
+    cartPrice.textContent = new Intl.NumberFormat().format(this.cart.total);
+    cartTotalPrice.textContent = new Intl.NumberFormat().format(this.cart.totalWithPromo);
   };
 
   async restoreCart() {

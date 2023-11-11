@@ -2,6 +2,7 @@
   padding: 80px 0 116px;
   display: grid;
   grid-template-columns: repeat(2, minmax(auto, 688px));
+  gap: 32px;
 
   &__title {
     font-size: 40px;
@@ -9,10 +10,14 @@
   }
 
   &__benefits {
-    margin-top: 40px;
+    margin-top: 42px;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 39px;
+
+    li {
+      max-width: 568px;
+    }
   }
 
   &__subtitle {
@@ -24,15 +29,16 @@
   &__text {
     font-size: 16px;
     line-height: 24px;
-    margin-top: 16px;
+    margin-top: 19px;
   }
 
   &__course-wrapper {
-    padding: 40px;
+    padding: 63px 45px 40px 40px;
     display: flex;
   }
 
   &__course-text {
+    line-height: 28px;
     font-weight: 700;
   }
 
@@ -44,5 +50,6 @@
   &__course-qr {
     display: block;
     object-fit: contain;
+    margin-top: 5px;
   }
 }
