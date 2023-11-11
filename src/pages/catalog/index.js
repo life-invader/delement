@@ -1,9 +1,9 @@
 import { categories } from "../../shared/constants/common";
 import { getMeta, getPage } from "../../shared/lib";
 import { CatalogList } from "../../widgets/catalog-list/ui";
-import { Filter } from "../../widgets/filter/filter";
-import { Footer } from "../../widgets/footer/ui/footer";
-import { Header } from "../../widgets/header/ui/header";
+import { Filter } from "../../widgets/filter/ui/index";
+import { Footer } from "../../widgets/footer/ui/index";
+import { Header } from "../../widgets/header/ui/index";
 
 export default () => {
   return getPage({

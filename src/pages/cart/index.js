@@ -1,7 +1,7 @@
 import { getMeta, getPage } from "../../shared/lib";
 import { Cart } from "../../widgets/cart/ui";
-import { Footer } from "../../widgets/footer/ui/footer";
-import { Header } from "../../widgets/header/ui/header";
+import { Footer } from "../../widgets/footer/ui";
+import { Header } from "../../widgets/header/ui";
 
 export default () => {
   return getPage({

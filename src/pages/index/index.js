@@ -1,7 +1,7 @@
 import { getMeta, getPage } from "../../shared/lib";
-import { Footer } from "../../widgets/footer/ui/footer";
-import { Header } from "../../widgets/header/ui/header";
-import { Slider } from "../../widgets/slider";
+import { Footer } from "../../widgets/footer/ui";
+import { Header } from "../../widgets/header/ui";
+import { Slider } from "../../widgets/slider/ui";
 
 export default () => {
   return getPage({
