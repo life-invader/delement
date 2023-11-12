@@ -43,9 +43,8 @@ export const store = createStore(
         const response = await fetch("/cart", {
           method: "POST",
         });
-        const { message } = await response.json();
-        console.debug(message);
         set({ ...initialState });
+        return response;
       },
     })), {
       name: "products",

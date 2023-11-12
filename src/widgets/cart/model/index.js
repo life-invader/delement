@@ -8,12 +8,15 @@ import {
 } from "../../../shared/store/actions";
 import { CartProduct } from "../../../entities/product/product-in-cart";
 import { removeProductFromCart } from "../../../features/cart/remove-from-cart";
+import { Modal } from "../../../shared/ui/modal";
 
 export class CartModel {
   node;
   cart;
   checkoutButton;
   promoInput;
+  successModal = Modal({});
+  errorModal = Modal({});
 
   constructor() {
     if (CartModel.#instance) {
@@ -58,6 +61,11 @@ export class CartModel {
     }
 
     this.cart = selectCart();
+    if (this.cart.productIds.length <= 0) {
+      this.checkoutButton.disabled = true;
+    } else {
+      this.checkoutButton.disabled = false;
+    }
 
     const qtyOfProducts = document.querySelector(".checkout__qty");
     const cartPrice = document.querySelector(".checkout__price");
@@ -77,11 +85,34 @@ export class CartModel {
     await applyPromo(promoCode);
   };
 
+  closeModal = (modal) => (evt) => {
+    const modalOverlay = modal;
+    const closeButton = modal.querySelector(".modal__button");
+
+    if (evt.target !== closeButton && evt.target !== modalOverlay) {
+      return;
+    }
+
+    modal.remove();
+  };
+
+  renderModal(modal) {
+    document.body.append(modal);
+    modal.addEventListener("click", this.closeModal(modal));
+  }
+
   placeOrder = async () => {
-    await placeUserOrder();
-    this.renderCartInfo();
-    this.renderCartItems();
-    this.promoInput.value = "";
+    try {
+      const response = await placeUserOrder();
+      const { message } = await response.json();
+      this.renderCartInfo();
+      this.renderCartItems();
+      this.promoInput.value = "";
+      this.renderModal(Modal({ message }));
+    } catch (err) {
+      this.renderModal(Modal({ message: err.message }));
+      throw new Error("Ошибка заказа");
+    }
   };
 
   initEventListeners() {

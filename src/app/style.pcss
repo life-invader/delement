@@ -24,6 +24,7 @@
 }
 
 /* Common */
+
 *,
 *::after,
 *::before {
@@ -103,6 +104,7 @@ body {
 }
 
 /* Reusable components */
+
 .button {
   background-color: #1c6cd5;
   color: #fff;
@@ -138,4 +140,50 @@ body {
 
 .logo {
   display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background-color: #1c6cd5;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 24px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #094593;
+    }
+  }
 }
