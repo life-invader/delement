@@ -1,6 +1,7 @@
 import { getMeta, getPage } from "../../shared/lib";
-import { Footer } from "../../widgets/footer/ui/footer";
-import { Header } from "../../widgets/header/ui/header";
+import { Cart } from "../../widgets/cart/ui";
+import { Footer } from "../../widgets/footer/ui";
+import { Header } from "../../widgets/header/ui";
 
 export default () => {
   return getPage({
@@ -10,9 +11,18 @@ export default () => {
     ${Header({})}
     <main class="main">
       <div class="container">
-        <h1 class="main__header">Корзина</h1>
-        <p class="main__text">О нас. О нас. О нас. О нас. О нас.О нас. О нас. О нас. О нас. О нас.О нас. О нас. О нас. О нас. Это
-        О нас.</p>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="/">Главная</a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" >Каталог</a>
+          </li>
+        </ul>
+        <h1 class="title main__title">Корзина</h1>
+        
+        ${Cart({})}
       </div>
     </main>
     ${Footer()}

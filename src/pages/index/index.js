@@ -1,11 +1,7 @@
 import { getMeta, getPage } from "../../shared/lib";
-import { Button } from "../../shared/ui/button";
-import { Input } from "../../shared/ui/input";
-import { Footer } from "../../widgets/footer/ui/footer";
-import { Header } from "../../widgets/header/ui/header";
-import { Slider } from "../../widgets/slider";
-
-import { products } from "../../shared/api/mocks";
+import { Footer } from "../../widgets/footer/ui";
+import { Header } from "../../widgets/header/ui";
+import { Slider } from "../../widgets/slider/ui";
 
 export default () => {
   return getPage({
@@ -15,8 +11,8 @@ export default () => {
     ${Header({})}
     <main class="main">
       <div class="container">
-        <h1 class="title main__header">Главная</h1>
-        ${Slider({ products })}
+        <h1 class="title main__title">Популярные товары</h1>
+        ${Slider({  })}
         
         <section class="company">
           <div class="company__about">

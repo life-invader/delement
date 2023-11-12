@@ -44,3 +44,9 @@ export const getAttrs = (attrs) => {
     .map(([ key, value ]) => `${key}="${value}"`)
     .join(" ");
 };
+
+export const createNodeFromString = (string) => {
+  const div = document.createElement("div");
+  div.innerHTML = string;
+  return div.firstElementChild;
+};

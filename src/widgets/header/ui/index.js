@@ -18,20 +18,22 @@ export const Header = (props) => {
     <div class="container">
       <nav class="nav header__nav">
         <div class="header__nav-logo">
-          ${Logo({ extraAttrs: { src: "/images/logo.svg" } })}
+          <a href="/">
+            ${Logo({ extraAttrs: { src: "/images/logo.svg" } })}
+          </a>
         </div>
 
         <ul class="nav__list">
           <li class="nav__list-item">
-            <a class="nav__list-link" href="index.html" data-url="index">Главная</a>
+            <a class="nav__list-link" href="/" data-url="/">Главная</a>
           </li>
 
           <li class="nav__list-item">
-            <a class="nav__list-link" href="catalog.html" data-url="catalog">Каталог</a>
+            <a class="nav__list-link" href="catalog.html" data-url="/catalog">Каталог</a>
           </li>
 
           <li class="nav__list-item">
-            <a class="nav__list-button button" href="cart.html" data-url="cart">Корзина</a>
+            <a class="nav__list-button button" href="cart.html" data-url="/cart">Корзина</a>
           </li>
         </ul>
       </nav>
