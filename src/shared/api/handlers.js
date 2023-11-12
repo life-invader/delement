@@ -37,6 +37,13 @@ export const handlers = [
 
   // Place new order
   rest.post("/cart", (_req, res, ctx) => {
+    cart.productIds = [];
+    cart.qty = 0;
+    cart.total = 0;
+    cart.totalWithPromo = 0;
+
+    userSession.isPromoActive = false;
+
     return res(ctx.json({ isSuccess: true, message: "Заказ успешно создан!" }));
   }),
 
